@@ -71,7 +71,7 @@ class CourseController extends Controller
      */
     public function show(Course $course)
     {
-        // $this->authorize('view', $course);
+        $course->loadMissing('students');
 
         return view('courses.show', compact('course'));
     }

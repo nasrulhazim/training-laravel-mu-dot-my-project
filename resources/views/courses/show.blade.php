@@ -24,6 +24,35 @@
                     </tr>
                 </table>
             </div>
+
+
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg mt-8">
+                <p class="text-2xl m-4 font-bold">Students</p>
+                <table class="m-4">
+                    <thead>
+                        <tr>
+                            <th class="w-1/3">Name</th>
+                            <th class="w-1/3">E-mail</th>
+                            <th class="w-1/3">IC</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @forelse ($course->students as $student)
+                            <tr>
+                                <td class="p-2 text-center">{{ $student->name }}</td>
+                                <td class="p-2 text-center">{{ $student->email }}</td>
+                                <td class="p-2 text-center">{{ $student->ic }}</td>
+                            </tr>
+                        @empty
+                            <tr>
+                                <td colspan="3" class="text-center px-4">No students for this course yet. Consider to
+                                    <a href="{{ route('courses.edit', $course) }}">add</a> students to this course.
+                                </td>
+                            </tr>
+                        @endforelse
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </x-app-layout>

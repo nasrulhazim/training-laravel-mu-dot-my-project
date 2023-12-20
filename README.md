@@ -20,3 +20,9 @@
 - setup policy usage in blade and controller
 - setup index, show, edit and create screen
 - setup the controller
+
+
+## Features
+
+- [ ] Allow add / remove students from course details.
+- [ ] Allow add / remove course from student details.

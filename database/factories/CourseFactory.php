@@ -17,7 +17,9 @@ class CourseFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => $this->faker->randomElement([
+                'PHP', 'Laravel', 'MySQL'
+            ]) . ' ' . $this->faker->randomNumber(2, true),
         ];
     }
 }

@@ -13,7 +13,7 @@
 
 ## Development Strategy
 
-- create model, migration, seeder, factory, controller
+- create model, migration, seeder, factory, controller, policy
 - setup migration, factory and seeder
 - setup menu navigation
 - setup the policy

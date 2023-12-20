@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
-
     public function __construct()
     {
         $this->authorizeResource(Student::class);

@@ -18,8 +18,8 @@ class CourseFactory extends Factory
     {
         return [
             'name' => $this->faker->randomElement([
-                'PHP', 'Laravel', 'MySQL'
-            ]) . ' ' . $this->faker->randomNumber(2, true),
+                'PHP', 'Laravel', 'MySQL',
+            ]).' '.$this->faker->randomNumber(2, true),
         ];
     }
 }

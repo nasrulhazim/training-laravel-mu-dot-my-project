@@ -16,4 +16,10 @@ class Student extends Model
         'phone_number',
         'address',
     ];
+
+    public function courses()
+    {
+        return $this->belongsToMany(Course::class)
+            ->withTimestamps();
+    }
 }

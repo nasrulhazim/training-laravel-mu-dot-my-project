@@ -25,6 +25,27 @@
                         <x-input-error for="email" class="mt-2" />
                     </div>
 
+                    <div class="col-span-6 sm:col-span-4 mb-4">
+                        <x-label for="ic" value="{{ __('IC') }}" />
+                        <x-input id="ic" name="ic" type="text" class="mt-1 block w-full"
+                            required autocomplete="ic" />
+                        <x-input-error for="ic" class="mt-2" />
+                    </div>
+
+                    <div class="col-span-6 sm:col-span-4 mb-4">
+                        <x-label for="phone_number" value="{{ __('Phone Number') }}" />
+                        <x-input id="phone_number" name="phone_number" type="text" class="mt-1 block w-full"
+                            required autocomplete="phone_number" />
+                        <x-input-error for="phone_number" class="mt-2" />
+                    </div>
+
+                    <div class="col-span-6 sm:col-span-4 mb-4">
+                        <x-label for="address" value="{{ __('Address') }}" />
+                        <x-input id="address" name="address" type="text" class="mt-1 block w-full"
+                            required autocomplete="address" />
+                        <x-input-error for="address" class="mt-2" />
+                    </div>
+
                     <x-button>Submit</x-button>
                 </form>
             </div>

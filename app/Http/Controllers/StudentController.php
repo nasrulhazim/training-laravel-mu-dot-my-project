@@ -101,7 +101,7 @@ class StudentController extends Controller
         // if the email input and the current student email
         // in database is not the same.
         $email_rules = ['required', 'string', 'email', 'max:255'];
-        $ic_rules = ['required', 'string', 'max:255'];
+        $ic_rules = ['required', 'string', 'min:12', 'max:12'];
 
         if($request->email != $student->email) {
             $email_rules[] = 'unique:students';

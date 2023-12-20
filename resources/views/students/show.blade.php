@@ -18,6 +18,18 @@
                         <td class="p-2">{{ $student->email }}</td>
                     </tr>
                     <tr>
+                        <td class="p-2 text-right">IC:</td>
+                        <td class="p-2">{{ $student->ic }}</td>
+                    </tr>
+                    <tr>
+                        <td class="p-2 text-right">Phone Number:</td>
+                        <td class="p-2">{{ $student->phone_number }}</td>
+                    </tr>
+                    <tr>
+                        <td class="p-2 text-right">Address:</td>
+                        <td class="p-2">{{ $student->address }}</td>
+                    </tr>
+                    <tr>
                         <td class="p-2 text-right">Registered At:</td>
                         <td class="p-2">{{ $student->created_at->format('d-M-Y H:i:s') }}</td>
                     </tr>

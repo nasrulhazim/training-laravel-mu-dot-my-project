@@ -44,6 +44,48 @@
                     </tr>
                 </table>
             </div>
+
+            <div class="flex justify-end my-4">
+                <a href="{{ route('manage-courses.create', $student) }}" class="bg-indigo-700 rounded-md text-white py-2 px-4 hover:bg-indigo-500">Register
+                    Course</a>
+            </div>
+
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg mt-4">
+
+                <p class="text-2xl m-4 font-bold">Courses</p>
+
+                <table class="m-4">
+                    <tr>
+                        <th class="w-2/3">Course</th>
+                        <th class="w-1/3">Action</th>
+                    </tr>
+                    @forelse ($student->courses as $course)
+                        <tr>
+                            <td class="p-2 w-2/3">{{ $course->name }}</td>
+                            <td class="p-2 w-1/3">
+
+                                <div>
+                                    <form method="POST" action="{{ route('manage-courses.destroy', $student, $course) }}">
+                                        @csrf @method('DELETE')
+
+                                        <div class="px-1 cursor-pointer"
+                                            onclick="if(confirm('Are you sure want to delete {{ $student->name }}?')) {
+                                                        this.parentElement.submit()
+                                                    }">
+                                            🗑️
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </td>
+                        </tr>
+                    @empty
+                        <tr>
+                            <td colspan="2" class="text-center">This student didn't register to any courses.</td>
+                        </tr>
+                    @endforelse
+                </table>
+            </div>
         </div>
     </div>
 </x-app-layout>

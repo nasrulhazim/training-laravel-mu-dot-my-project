@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\Student\ManageCourseController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,4 +32,16 @@ Route::middleware([
     Route::resource('courses', CourseController::class);
 
     Route::resource('students', StudentController::class);
+
+    Route::get('manage-courses/{student}/create', [
+        ManageCourseController::class, 'create'
+    ])->name('manage-courses.create');
+
+    Route::post('manage-courses/{student}', [
+        ManageCourseController::class, 'store'
+    ])->name('manage-courses.store');
+
+    Route::delete('manage-courses/{student}', [
+        ManageCourseController::class, 'destroy'
+    ])->name('manage-courses.destroy');
 });

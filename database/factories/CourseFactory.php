@@ -23,3 +23,4 @@ class CourseFactory extends Factory
         ];
     }
 }
+// https://fakerphp.github.io/

@@ -16,7 +16,8 @@ class StudentFactory extends Factory
      */
     public function definition(): array
     {
-        $ic = $this->faker->unique()->randomNumber(9, true).$this->faker->unique()->randomNumber(3, true);
+        $ic = $this->faker->unique()->randomNumber(9, true)
+            .$this->faker->unique()->randomNumber(3, true);
 
         return [
             'name' => $this->faker->name,

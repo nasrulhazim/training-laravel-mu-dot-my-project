@@ -41,7 +41,7 @@ Route::middleware([
         ManageCourseController::class, 'store'
     ])->name('manage-courses.store');
 
-    Route::delete('manage-courses/{student}', [
+    Route::delete('manage-courses/{student}/{course}', [
         ManageCourseController::class, 'destroy'
     ])->name('manage-courses.destroy');
 });

@@ -65,7 +65,7 @@
                             <td class="p-2 w-1/3">
 
                                 <div>
-                                    <form method="POST" action="{{ route('manage-courses.destroy', $student, $course) }}">
+                                    <form method="POST" action="{{ route('manage-courses.destroy', compact('student', 'course')) }}">
                                         @csrf @method('DELETE')
 
                                         <div class="px-1 cursor-pointer"
